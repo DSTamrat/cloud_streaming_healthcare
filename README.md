@@ -78,23 +78,23 @@ Real‑time dashboards
 
 *******************************************************************************
 
-## Real-Time Pipeline Architecture
+## Real-Time Pipeline Architecture (Mermaid Diagram)
 
-Windows Host (Python Producer)
-        |
-        |   PLAINTEXT_HOST://localhost:29092
-        v
-+------------------------+
-|     Kafka Broker       |
-|   (Docker Container)   |
-+------------------------+
-           ^
-           |
-           |   PLAINTEXT://kafka:9092
-+------------------------+
-|       Kafka UI         |
-|   (Docker Container)   |
-+------------------------+
+```mermaid
+flowchart TD
+    A[Windows Host<br>Python Producer] -->|PLAINTEXT_HOST://localhost:29092| B[Kafka Broker<br>Docker Container]
+    B -->|PLAINTEXT://kafka:9092| C[Kafka UI<br>Docker Container]
+
+GitHub will automatically draw a **visual diagram** — no images needed.
+
+---
+
+# ⭐ **Folder Structure (Downward Tree)**  
+Paste this into your README to show the folder tree exactly like your screenshot:
+
+```markdown
+## Folder Structure
+
 
 ---
 Components
@@ -146,7 +146,6 @@ Open:
    Navigate to:
 
    local → Topics → healthcare_admissions_stream → Messages
-📁 Folder Structure
 
 \##  📁 Folder Structure
 
