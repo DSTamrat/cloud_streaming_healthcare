@@ -77,9 +77,7 @@ Delta Lake storage
 Real‑time dashboards
 
 *******************************************************************************
-
-Real‑Time Pipeline Architecture
-
+## Real‑Time Pipeline Architecture
 
 Windows Host (Python Producer)
         |
@@ -148,6 +146,7 @@ Open:
    Navigate to:
 
    local → Topics → healthcare_admissions_stream → Messages
+
 ##  📁 Folder Structure
 
 cloud_streaming_healthcare/
@@ -162,7 +161,6 @@ cloud_streaming_healthcare/
 ├── data_raw/
 ├── data_processed/
 └── README.md
-
 
 => Project Status
 Component	               Status
