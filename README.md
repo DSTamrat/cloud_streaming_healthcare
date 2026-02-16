@@ -78,25 +78,23 @@ Real‑time dashboards
 
 *******************************************************************************
 
-Real‑Time Pipeline Architecture
-
+## Real-Time Pipeline Architecture
 
 Windows Host (Python Producer)
         |
-        |  PLAINTEXT_HOST://localhost:29092
+        |   PLAINTEXT_HOST://localhost:29092
         v
-+---------------------+
-|   Kafka Broker      |
-|  (Docker Container) |
-+---------------------+
-        ^
-        |  PLAINTEXT://kafka:9092
-        |
-+---------------------+
-|     Kafka UI        |
-|  (Docker Container) |
-+---------------------+
-
++------------------------+
+|     Kafka Broker       |
+|   (Docker Container)   |
++------------------------+
+           ^
+           |
+           |   PLAINTEXT://kafka:9092
++------------------------+
+|       Kafka UI         |
+|   (Docker Container)   |
++------------------------+
 
 ---
 Components
@@ -156,17 +154,13 @@ cloud_streaming_healthcare/
 │
 ├── docker/
 │   └── docker-compose.yml
-│
 ├── producer/
 │   └── healthcare_producer.py
-│
+├── consumer/
+├── etl/
+│   └── generate_healthcare_data.py
 ├── data_raw/
 ├── data_processed/
-│
-├── etl/
-│   ├── generate_healthcare_data.py
-│   └── etl_healthcare.py
-│
 └── README.md
 
 => Project Status
